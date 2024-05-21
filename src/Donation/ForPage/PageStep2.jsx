@@ -24,13 +24,12 @@ const PageStep2 = () => {
      initial={{opacity:0 ,x:"100%"}}
     animate={{opacity:1,x:0}}
     exit={{opacity:0,x:"-100%"}}
-    // initial={{y:-18 , x:-190}}
-    // whileHover={{y:-50 , x:0}}
+   
     transition={{duration:0.3}}
-     className="w-4/12 h-full text-center space-y-5 border rounded-lg overflow-hidden">
+     className="md:w-4/12 h-full text-center md:space-y-5 border rounded-lg overflow-hidden">
 
       <Progess />
-      <div className='flex-col text-star space-y-3 *:shadow p-3 *:p-3 '>
+      <div className='flex-col text-star space-y-3 *:shadow p-3 *:p-2 md:*:p-3 '>
 <div onClick={()=>setPaymentOption("Pay")} className={`text-black/75 ${paymentOption === "Pay" ? "bg-purple-500 rounded-lg text-white" : "bg-slate-100"}`}><TiVendorApple className='inline-flex size-5'/> Pay</div>
 <div  onClick={()=>setPaymentOption("GPay")} className={`text-black/65  ${paymentOption === "GPay" ? "bg-purple-500 rounded-lg text-white" : "bg-slate-100"}`}><FcGoogle className='inline-flex size-5'/> Pay</div>
 <div  onClick={()=>setPaymentOption("PayPal")} className={`text-sky-950 font-semibold italic  ${paymentOption === "PayPal" ? "bg-purple-500 rounded-lg text-white" : "bg-slate-100"}`}><RiPaypalFill className='inline-flex size-5'/> Pay<span className='text-sky-500'>Pal</span></div>
@@ -40,7 +39,7 @@ const PageStep2 = () => {
 
 
       </div>
-<div className="px-4 pb-5 space-y-3">
+<div className="px-4 pb-5 space-y-1 md:space-y-3">
 
 <button onClick={() => setStepCount(StepCount +1)} disabled={!choosenAmount} className="bg-orange-500 disabled:bg-orange-300  text-slate-100 p-2 w-full rounded-full">Next</button>
 <button disabled={StepCount===0} onClick={() => setStepCount(StepCount - 1)} className="bg-orange-500 disabled:bg-orange-300  text-slate-100 p-2 w-full rounded-full">Prev</button>

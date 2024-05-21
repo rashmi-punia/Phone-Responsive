@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {Link} from "react-router-dom"
 const List=[
     {num: "3,000,000+",
@@ -16,28 +16,30 @@ const List=[
                         text: "members in our private Slack Community"},
     ]
 
-const Head = () => {
+
+
+const Head = ({stepNum,setStepNum}) => {
   return (
     <>
     <nav className="bg-gradient-to-r rounded-xl  from-indigo-200 to-pink-100 via-blue-100 " >
     <div className='h-16 z-10 fixed top-0 right-0 left-0 shadow shadow-gray-300 bg-gradient-to-r  from-indigo-200 to-pink-100 via-blue-100 '>
-    <div className='flex mx-5 p-4'>
+    <div className='flex md:mx-5 md:p-4'>
     <div>
             <Link className="text-3xl font-lexend font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-950 to-pink-600 ">O G T</Link>
            </div> 
         <div className='mx-auto '>
-            <ol type='1' className='flex space-x-6'>
-                <li>1. create your list</li>
-                <li>2. preview</li>
-                <li>3. confirm & pay</li>
+            <ol type='1' className='flex space-x-6 *:capitalize'>
+                <li className={`${stepNum === 1 ? "font-semibold ogt " : ""} text-slate-600`}>1.Complete your Project Form</li>
+                <li className={`${stepNum === 2 ? "font-semibold ogt" : ""} text-slate-600`}>2. preview</li>
+                <li className={`${stepNum === 3 ? "font-semibold ogt" : ""} text-slate-600`}>3. confirm & pay</li>
             </ol>
         </div>
 
     </div>
 
     </div>
-    <div className='mx-4 p-7 mt-28 rounded-2xl'>
-    <h1 className='text-4xl text-slate-900 font-riot py-4 '>
+    <div className='mx-4 md:p-7 md:mt-28 mt-20 rounded-2xl'>
+    <h1 className='md:text-4xl text-lg text-slate-900 p-2 md:py-4 '>
     Every remote job posted here will be 
     <span className='text-blue-600'> shared on Remotive's network</span>
     </h1>

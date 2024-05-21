@@ -8,9 +8,9 @@ export default function Tabs() {
   };
   return (
     <>
-      <div className="m-6">
-        <div className="text-center m-6">
-          <h1 className=" font-riot text-3xl text-slate-800 capitalize m-2">
+      <div className="md:m-6 mx-4 my-9">
+        <div className="text-center m-4 md:m-6">
+          <h1 className=" font-riot text-2xl md:text-3xl text-slate-800 capitalize m-2">
             how it works
           </h1>
           <span className="rounded-full relative w-full h-1 inline-block bg-pink-50">
@@ -29,11 +29,11 @@ export default function Tabs() {
           <div className=" md:w-1/3" onClick={() => toggleTab(1)}>
             <div className="m-3 py-3">
               <h1
-                className={
-                  toggleState === 1
-                    ? "text-xl font-riot capitalize text-purple-900 "
-                    : "text-xl font-riot capitalize  text-opacity-45"
-                }
+                className={`
+                  ${toggleState === 1
+                    ? "text-lg md:text-xl text-purple-900 "
+                    : "text-lg md:text-xl text-opacity-45"} capitalize
+                `}
               >
                 1. post your job
               </h1>
@@ -48,8 +48,8 @@ export default function Tabs() {
             <div
               className={toggleState === 1 ? "m-3 block flex-grow-0" : "hidden"}
             >
-              <ul className="space-y-2 list-inside list-disc">
-                <li className="">
+              <ul className="space-y-2 list-outside list-disc *:mx-4">
+                <li>
               <span className="text-slate-800">
 
                Craft a Compelling Project Description :
@@ -64,7 +64,7 @@ export default function Tabs() {
                   </p>
                 </li>
                 <li>
-                <span className="text-slate-800" >
+                <span className="text-slate-800 " >
                Set Clear Expectations:
 
                 </span>
@@ -81,11 +81,11 @@ Be as specific as possible about your project needs.  Include details such as th
           <div className=" md:w-1/3" onClick={() => toggleTab(2)}>
             <div className="m-3 py-3">
               <h1
-                className={
-                  toggleState === 2
-                    ? "text-xl font-riot capitalize text-purple-900 "
-                    : "text-xl font-riot capitalize  text-opacity-55"
-                }
+               className={`
+                  ${toggleState === 2
+                    ? "text-lg md:text-xl text-purple-900 "
+                    : "text-lg md:text-xl text-opacity-45"} capitalize
+                `}
               >
                 2. Choose Your Developer
               </h1>
@@ -110,11 +110,11 @@ Once you've posted your project, qualified Developers will submit proposals outl
           <div className=" md:w-1/3" onClick={() => toggleTab(3)}>
             <div className="m-3 py-3">
               <h1
-                className={
-                  toggleState === 3
-                    ? "text-xl font-riot capitalize text-purple-900 "
-                    : "text-xl font-riot capitalize  text-opacity-55"
-                }
+                className={`
+                  ${toggleState === 3
+                    ? "text-lg md:text-xl text-purple-900 "
+                    : "text-lg md:text-xl text-opacity-45"} capitalize
+                `}
               >
                 3. Delivery upon conformation
               </h1>
@@ -140,7 +140,7 @@ Once you've posted your project, qualified Developers will submit proposals outl
           </div>
         </div>
       </div>
-      <div className="flex content-center mt-24">
+      <div className="flex content-center md:mt-24">
         <Link to={"/donate"} className="button mx-auto ">
           Donate Us
         </Link>

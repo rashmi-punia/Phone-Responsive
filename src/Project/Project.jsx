@@ -1,11 +1,6 @@
 import React from "react";
-// import Header from "../landing_components/header";
-// import Nav from "../landing_components/Nav";
-// import { Link } from "react-router-dom";
-// import Links from "./ComapnyDescription/Left/Links";
-// import Heading from "./ComapnyDescription/Left/Heading";
 import Display from "./ComapnyDescription/Display";
-import Footer from "../page_components/Footer";
+import Footer from "../landing_components/footer";
 import Header from "../page_components/header";
 
 const Project = () => {
@@ -18,7 +13,10 @@ const Project = () => {
       <div className="mt-20 ml-7 space-y-4">
         <Display />
       </div>
-      <Footer />
+      <div className="bg-gradient-to-br  from-indigo-200 to-pink-100 via-blue-100 ">
+        <Footer route="home"/>
+
+      </div>
     </div>
   );
 };

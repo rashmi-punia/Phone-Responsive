@@ -1,14 +1,8 @@
 import React from "react";
 import { FaHeart } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
-import { FaInstagramSquare } from "react-icons/fa";
-import { FaFacebook } from "react-icons/fa6";
-import { FaTelegramPlane } from "react-icons/fa";
-import { IoMdMail } from "react-icons/io";
-import { IconContext } from "react-icons";
+
 import { FaArrowUpLong } from "react-icons/fa6";
-import { MdOutlineDriveFolderUpload, MdOutlineMailOutline } from "react-icons/md";
+import { MdOutlineMailOutline } from "react-icons/md";
 import { FaQuestionCircle } from "react-icons/fa";
 import { GrArticle } from "react-icons/gr";
 import { RiDiscordLine } from "react-icons/ri";
@@ -30,8 +24,8 @@ const Footer = ({route}) => {
   };
   return (
     <>
-      <div className=" text-slate-800 mt-8">
-        <div className="flex flex-col items-center space-y-7 md:flex-row md:items-baseline flex-wrap justify-between p-1 mx-6 pb-16 ">
+      <div className=" text-slate-800 mt-8 ">
+        <div className="flex flex-col content-center space-y-7 md:flex-row md:items-baseline flex-wrap md:justify-between p-1 md:mx-6 md:pb-16 py-4 ">
           <div>
             <h1 className="footer-gradient font-semibold uppercase">
               help and support
@@ -67,28 +61,7 @@ const Footer = ({route}) => {
             <p className={`"m-1 ${route == 'aboutus' || route=='Faqs' ? "text-slate-100" : "text-slate-900"} "`}>&copy; 2024, made <span className="ogt ">O G T</span> with</p>
             <FaHeart className="text-red-600 mx-2 -mb-0.5" />
           </div>
-          {/* <div className="flex flex-shrink justify-center p-3 *:m-3">
-            <IconContext.Provider value={{ size: "1.5rem" }}>
-              <a className="hover:text-sky-800  text-slate-900 cursor-pointer">
-                <FaLinkedin className="hover:size-7" />
-              </a>
-              <a className="hover:text-sky-800  text-slate-900 cursor-pointer">
-                <FaTwitter className="hover:size-7" />
-              </a>
-              <a className="hover:text-sky-800  text-slate-900 cursor-pointer">
-                <FaInstagramSquare className="hover:size-7" />
-              </a>
-              <a className="hover:text-sky-800   text-slate-900 cursor-pointer">
-                <FaFacebook className="hover:size-7" />
-              </a>
-              <a className="hover:text-sky-800  text-slate-900  cursor-pointer">
-                <FaTelegramPlane className="hover:size-7" />
-              </a>
-              <a className="hover:text-sky-800   text-slate-900 cursor-pointer">
-                <IoMdMail className="hover:size-7" />
-              </a>
-            </IconContext.Provider>
-          </div> */}
+         
       </div>
       <div onClick={handleScrollToTop}>
         <FaArrowUpLong className="opacity-75 text-slate-900 hover:border border-y-blue-300 shadow-md shadow-slate-500 border-x-indigo-300 hover:opacity-100 m-3 size-10 fixed right-0 bottom-0 z-10 p-2 rounded-full hover:delay-150" />

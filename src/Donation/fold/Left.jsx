@@ -18,15 +18,15 @@ const Left = () => {
     initial={{scale:1 ,x:0}}
     whileHover={{scale:1.04 ,x:30}}
     transition={{duration:0.3}}
-     className="w-1/2 relativ bg-white z-10 text-center space-y-5 border rounded-lg overflow-hidden">
+     className="md:w-1/2 w-screen h-fit bg-white z-10 text-center md:space-y-5 border rounded-lg overflow-hidden">
      <Progess/>
-      <div className="space-y-3 px-4 text-center">
+      <div className="space-y-3 md:px-4 text-center">
         <p>Every Donation Counts - Make Yours Today!</p>
-        <div className="space-x- block mx-auto rounded-full border w-fit p- border-purple-500">
+        <div className="space-x- block mx-auto rounded-full border w-fit border-purple-500">
           <button key="1"
            onClick={() => setActiveTab(1)}
            className={`${activeTab === 1 ? "" : "hover:text-black/60"} 
-            relative rounded-full px-3 py-1.5 text-sm font-medium text-black outline-sky-400 transition focus-visible:outline-2`}
+            relative rounded-full md:px-3 py-1.5 font-medium text-black outline-sky-400 transition focus-visible:outline-2`}
             
            >
              {activeTab === 1 && (
@@ -49,7 +49,7 @@ const Left = () => {
            <button key="2"
            onClick={() => setActiveTab(2)}
            className={`${activeTab === 2 ? "" : "hover:text-black/60"} 
-            relative rounded-full px-3 py-1.5 text-sm font-medium text-black outline-sky-400 transition focus-visible:outline-2`}
+            relative rounded-full md:px-3 py-1.5 font-medium text-black outline-sky-400 transition focus-visible:outline-2`}
             
            >
              {activeTab === 2 && (

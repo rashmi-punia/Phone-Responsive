@@ -31,6 +31,10 @@ const SignUp = ({ setStep2SignUp }) => {
 
   const [conuntryList, setCountryList] = useState([]);
 
+  useEffect(() =>{
+    setTermsChecked(false)
+    user.firstName == ""
+  },[])
   useEffect(() => {
     fetch("https://restcountries.com/v3.1/all")
       .then((response) => response.json())
@@ -44,13 +48,14 @@ const SignUp = ({ setStep2SignUp }) => {
       });
   });
   useEffect(() => {
+    
     setIsFormValid(
       user.firstName.trim() !== "" && user.age >= 18 && termsChecked
     );
   }, [user.firstName, user.age, termsChecked]);
   return (
     <>
-      <div className=" px-4 mb-6 h-fit mb- border rounded-lg">
+      <div className=" px-4 mb-6 h-fit border rounded-lg">
         <div className=" space-y-4 w-fit p-4 h-full ">
           <div className="flex justify-between border-b-2 pb-3">
             <h2 className="text-xl font-semibold tracking-wide">
@@ -129,7 +134,7 @@ const SignUp = ({ setStep2SignUp }) => {
                   const { name, value } = e.target;
                   setUser({ ...user, [name]: value });
                 }}
-                className=" bg-white py-2.5 px-1 my-1 font-normal rounded-sm block outline outline-1 outline-purple-400"
+                className="w-full bg-white py-2.5 px-1 my-1 font-normal rounded-sm block outline outline-1 outline-purple-400"
               >
                 {conuntryList.map((country) => (
                   <option value={country}>{country}</option>
@@ -179,7 +184,7 @@ const SignUp = ({ setStep2SignUp }) => {
                 type="tel"
                 name="phNumber"
                 placeholder="Phone number"
-                className="border w-ful col-span-2  p-2 my-1 font-normal rounded-sm block outline outline-1 outline-purple-400"
+                className="border  w-full col-span-2  p-2 my-1 font-normal rounded-sm block outline outline-1 outline-purple-400"
               ></input>
             </label>
 
@@ -197,7 +202,7 @@ const SignUp = ({ setStep2SignUp }) => {
                 name="desc"
                 rows="10"
                 cols="76"
-                className="border rounded outline-none p-3"
+                className="border w-full rounded outline-none p-3"
               ></textarea>
             </label>
             <label className="  col-span-2 content-center">

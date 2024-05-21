@@ -10,9 +10,9 @@ const Thanks = () => {
     animate={{opacity:1,x:0}}
     exit={{opacity:0,x:"-100%"}}
     transition={{duration:0.3 , type:"spring" , stiffness:200,damping:40}}
-    className='flex-col space-y-12 w-screen text-sky-900 items-center justify-center *:text-3xl font-semibold'>
+    className='flex-col space-y-12 w-screen text-sky-900 items-center justify-center md:*:text-3xl font-semibold'>
       <p>Thank You for Your Generous Donation!</p>
-      <div className=' flex-grow'>
+      <div className=' text-center flex-grow md:h-[55vh] md:w-[49vw]'>
       <Lottie 
         options={{
           loop: true,
@@ -22,8 +22,6 @@ const Thanks = () => {
             preserveAspectRatio: 'xMidYMid slice'
           }
         }}
-        height="55vh"
-        width="49vw"
         
       />
 

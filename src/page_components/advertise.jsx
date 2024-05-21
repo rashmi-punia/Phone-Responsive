@@ -8,13 +8,13 @@ export default function Advertisements() {
         <a className="capitalize flex items-center cursor-pointer">
           <img
             src=" https://source.unsplash.com/random/person"
-            className="w-40 h-28 rounded-l-lg"
+            className="w-28 h-20 md:w-40 md:h-28 rounded-l-lg"
           />
-          <p className="text-wrap text-slate-700 tracking-wide p-4">
+          <p className="text-wrap text-slate-700 tracking-wide px-1 md:p-4">
             Get 10 free images from adobe stock.start now
           </p>
 
-          <p className="p-0.5 md:p-2 rounded-tl-lg bottom-0 right-0 absolute text-xs bg-gradient-to-br from-blue-300 via-purple-200 to-green-100 ">
+          <p className="px-0.5 md:p-2 rounded-tl-lg bottom-0 right-0 absolute text-xs bg-gradient-to-br from-blue-300 via-purple-200 to-green-100 ">
             Ad via carbon
           </p>
         </a>

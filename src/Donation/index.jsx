@@ -16,7 +16,7 @@ const Index = () => {
       <Header />
     </div>
       <div className="text-center mt-20 space-y-10 p-3 ">
-      <h1 className="text-4xl font-semibold text-sky-900">Step : {StepCount===1 ? "1" : StepCount===2 ? "2" : StepCount===3 ? "last" : ""}</h1>
+      <h1 className="md:text-4xl text-2xl font-semibold text-sky-900">Step : {StepCount===1 ? "1" : StepCount===2 ? "2" : StepCount===3 ? "last" : ""}</h1>
 
       <div className="flex justify-center items-center">
       <AnimatePresence>

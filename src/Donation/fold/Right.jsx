@@ -20,10 +20,10 @@ const Right = () => {
     initial={{y:-18 , x:-190}}
     whileHover={{y:-50 , x:0}}
     transition={{duration:0.3}}
-     className="w-1/2 bg-white text-center space-y-5 border rounded-lg overflow-hidden">
+     className="md:w-1/2 w-full bg-white text-center space-y-5 border rounded-lg overflow-hidden">
 
       <Progess />
-      <div className='flex-col text-star space-y-3 *:shadow *:bg-slate-100 p-3 *:p-3 '>
+      <div className='flex-col text-star space-y-3 *:shadow *:bg-slate-100 md:p-3 *:p-3 '>
 <div className='text-black/75'><TiVendorApple className='inline-flex size-5'/> Pay</div>
 <div className='text-black/65'><FcGoogle className='inline-flex size-5'/> Pay</div>
 <div className='text-sky-950 font-semibold italic'><RiPaypalFill className='inline-flex size-5'/> Pay<span className='text-sky-500'>Pal</span></div>

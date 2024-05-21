@@ -18,8 +18,7 @@ const backdrop = {
 
 const HomePage = () => {
   const {
-    showChats,setShowChats,
-    signUp,
+    showChats,
     isScrolled,
     showDonationBox,
     setShowDonationBox,
@@ -50,10 +49,6 @@ const HomePage = () => {
   return (
     <>
       <motion.div
-        //  initial={{opacity:0}}
-        //  animate={{opacity:1}}
-        //  exit={{opacity:0}}
-
         initial={{ width: 0, opacity: 0 }}
         animate={{ width: "100%", opacity: 1 }}
         exit={{
@@ -61,7 +56,7 @@ const HomePage = () => {
           opacity: 0,
           transition: { duration: 0.1 },
         }}
-        className="overflow-hidden font-fontBody"
+        className="overflow-hidden font-fontBody text-sm md:text-lg "
       >
         <div
           className={
@@ -87,24 +82,21 @@ const HomePage = () => {
       )} */}
         {showDonationBox && <Donate_box />}
 
-        {showChats && 
-        <div className="fixed right-2 min-h-96 rounded-l-lg bottom-4 z-50 bg-slate-50 shadow-lg">
-
-        <Inedx />
-        </div>
-        }
-        <div className="mx-16 *:rounded-lg">
-        <div className="w-full mt-2">
-<Advertisements />
-<Jobs />
-        </div>
+        {showChats && (
+          <div className="fixed right-2 min-h-96 rounded-l-lg bottom-4 z-50 bg-slate-50 shadow-lg">
+            <Inedx />
+          </div>
+        )}
+        <div className="md:mx-16 mx-2 *:rounded-lg">
+          <div className="w-full mt-2">
+            <Advertisements />
+            <Jobs />
+          </div>
           <RightSide />
           <DonateSteps />
         </div>
         <div className="bg-gradient-to-br  from-indigo-200 to-pink-100 via-blue-100">
-
-        <Footer route="home" />
-
+          <Footer route="home" />
         </div>
       </motion.div>
     </>

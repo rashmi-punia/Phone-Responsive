@@ -1,8 +1,7 @@
 import React from "react";
 import { FcHome } from "react-icons/fc";
 import { LiaCertificateSolid } from "react-icons/lia";
-import { GiMeditation } from "react-icons/gi";
-import { GiHighFive } from "react-icons/gi";
+import { GiMeditation,GiHighFive } from "react-icons/gi";
 import { BsEmojiHeartEyesFill } from "react-icons/bs";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -18,29 +17,27 @@ const variants = {
     opacity: 1,
     transition: {
       duration: 2,
-      // delay:0.4,
       type: "spring",
       stiffness: 100,
       damping: 25,
-      // staggerChildren:0.2
     },
   },
 };
 
 export default function Middiv() {
   return (
-    <div className=" p-1 group/one  text-wrap ">
+    <div className=" p-1 group/one text-wrap ">
       <motion.div
         variants={variants}
         initial="initial"
         whileInView="animate"
-        className=" my-4 mx-16 p-2 md:w-1/  *:duration-1000 *:ease-linear *:bg-cyan-50  *:shadow *:rounded-lg *:p-3 *:m-4 *:text-slate-900"
+        className=" my-4 md:mx-16 p-2 md:w- *:duration-1000 *:ease-linear *:bg-cyan-50  *:shadow *:rounded-lg *:p-2 *:m-3 md:*:p-3 md:*:m-4 *:text-slate-900"
       >
         <motion.div
           variants={variants}
           className="delay-100  group-hover/one:opacity-100  hover:delay-75  hover:bg-purple-100 hover:shadow-sm hover:shadow-purple-400"
         >
-          <h1 className=" capitalize tracking-wide text-lg pb-2 font-serif">
+          <h1 className=" capitalize tracking-wide text-lg pb-1.5 md:pb-2 font-serif">
             Unleash Your{" "}
             <span className="text-blue-700">Potential on a Global Stage</span>{" "}
             for tech startups.
@@ -62,7 +59,7 @@ export default function Middiv() {
           variants={variants}
           className=" delay-200  group-hover/one:opacity-100  hover:delay-75 hover:bg-purple-100 hover:shadow-sm hover:shadow-purple-400"
         >
-          <h1 className=" capitalize tracking-wide text-lg pb-2 font-serif">
+          <h1 className=" capitalize tracking-wide text-lg md:pb-2 pb-1.5 font-serif">
             Fostering{" "}
             <span className="text-blue-700"> Growth and Building Dreams</span> &
             Easily get Projects
@@ -83,7 +80,7 @@ export default function Middiv() {
           variants={variants}
           className=" delay-300  group-hover/one:opacity-100  hover:delay-75  hover:bg-purple-100 hover:shadow-sm hover:shadow-purple-400"
         >
-          <h1 className=" capitalize tracking-wide text-lg pb-2 font-serif">
+          <h1 className=" capitalize tracking-wide text-lg md:pb-2 pb-1.5 font-serif">
             breaking Down Geographical Barriers:
           </h1>
           <p className=" leading-tight">
@@ -104,7 +101,7 @@ export default function Middiv() {
           variants={variants}
           className="  delay-500  group-hover/one:opacity-100 hover:delay-75 hover:bg-purple-100 hover:shadow-sm hover:shadow-purple-400 "
         >
-          <h1 className=" capitalize tracking-wide text-lg pb-2 font-serif">
+          <h1 className=" capitalize tracking-wide text-lg pb-1.5 md:pb-2 font-serif">
             A World of Solutions at Your Fingertips
           </h1>
           <p className=" leading-tight">
@@ -117,17 +114,20 @@ export default function Middiv() {
             eliminating geographical constraints and ensuring access to the best
             talent available.
             <span className="inline-flex space-x-2 align-middle text-white mx-1 px-2">
-              <BsEmojiHeartEyesFill className="text-yellow-400 bg-red-600 rounded-full" />
+              <BsEmojiHeartEyesFill className="text-yellow-400 bg-red-500 rounded-full" />
             </span>
           </p>
         </motion.div>
       </motion.div>
-      <div className=" flex justify-center mt-1 pb-2">
-        <div className="flex justify-center items-center flex-col -space-y-64">
-          <Link to={"/home"} className="button w-fit">
+      <div className="md:mt-1 pb-2 flex-col justify-center items-center">
+<div>
+          <Link to={"/Home"} className="button w-fit block mx-auto">
             Browse Projects
           </Link>
-          <div className="">
+
+</div>
+        <div className="flex-col justify-center items-center -space-y-36 md:-space-y-64">
+          <div className=" md:h-[97vh] md:w-[36vw] block mx-auto ">
             <Lottie
               options={{
                 loop: true,
@@ -137,18 +137,11 @@ export default function Middiv() {
                   preserveAspectRatio: "xMidYMid slice",
                 },
               }}
-              height="97vh"
-              width="36vw"
+             
             />
           </div>
         </div>
       </div>
-
-      {/* <div className="">
-        <span className="w-44 h-44 animate-move  rounded-full inline-block  bg-gradient-to-br from-indigo-100 via-sky-100 to-pink-900  blur-sm "></span>
-        <span className="w-40 h-40  animate-move2  absolute left-1/4 top-96 rounded-full inline-block  bg-gradient-to-br from-indigo-100 via-sky-100 to-pink-900 opacity-20 -z-0   blur-sm "></span>
-        <span className="w-32 h-32 animate-move2 absolute right-44 top-44 rounded-full inline-block  bg-gradient-to-br from-indigo-100 via-sky-100 to-pink-900 opacity-20 -z-0  blur-sm "></span>
-      </div> */}
     </div>
   );
 }

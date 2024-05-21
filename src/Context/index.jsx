@@ -203,7 +203,7 @@ const GlobalState = ({ children }) => {
   const [project, setProject] = useState({
     title: "",
     desc: "",
-    price: null,
+    price: 8,
     category: "",
     postedBy: "",
     DeliveryTime: "",

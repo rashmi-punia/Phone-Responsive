@@ -30,7 +30,7 @@ const Step2 = () => {
 
   })
   return (
-    <div className="border rounded-lg p-6 mt-12 w-full m-40 flex-col justify-center items-center space-y-8">
+    <div className="border rounded-lg p-3 md:p-6 mt-12 md:m-40 flex-col justify-center items-center space-y-8">
       {validationError && <p className="text-red-500 text-lg"> {validationError} </p>}
       <label className="capitalize font-semibold ">
         {" "}
@@ -109,6 +109,7 @@ const Step2 = () => {
             setUser({
               ...resData.user,
               password: "",
+              
             });
 
           } catch (err) {
