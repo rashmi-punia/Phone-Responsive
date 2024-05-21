@@ -43,7 +43,7 @@ export function Content({displayText}){
       <div className="text-center my-10 md:my-14 md:mx-16 mx-4">
         <h1 className="font-bold font-riot text-xl md:text-4xl bg-clip-text bg-gradient-to-tr from-slate-700 via-sky-950 to-blue-950 text-transparent">
           <span className="md:text-6xl text-4xl text-transparent bg-clip-text bg-gradient-to-br from-purple-900 via-pink-900 to-orange-500">
-            OGT{" "}
+            OGT{" "} Rashmi
           </span>
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-purple-950 to-pink-600">
            {displayText}
